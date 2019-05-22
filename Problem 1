@@ -1,0 +1,38 @@
+// Problem 1
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int a, b, c, sum = 0;
+    double arr[10];
+    
+    cout << "Enter 10 integers: ";
+    
+    for (a = 0; a < 10; a ++)
+    {
+        cin >> arr[a];
+        sum = sum + arr[a];
+    }
+    
+    for (a = 0; a < 10; a ++)
+    {
+        for (b = a + 1; b < 10; b ++)
+        {
+            if (arr[a] > arr[b])
+            {
+                c = arr[a];
+                arr[a] = arr[b];
+                arr [b] = c;
+            }
+        }
+    }
+    
+    cout << "The smallest integer is " << arr[0] << '\n';
+    cout << "The largest integer is " << arr[9] << '\n';
+    cout << "The sum is " << sum << '\n';
+    cout << "The average is " << (sum / 10);
+
+    return 0;
+}
