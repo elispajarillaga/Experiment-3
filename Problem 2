@@ -1,0 +1,62 @@
+// Problem 2
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int temperature[3][7];
+    int index, j;
+    
+    cout << "Enter all temperature for a week of Province A, Province B, and then Province C. \n";
+    
+    for (index = 0; index < 3; index ++)
+    {
+        for (j = 0; j < 7; j++)
+        {
+            if (index == 0)
+            {
+                cout << "Province A" << ", Day " << j + 1 << " : ";
+                cin >> temperature[index][j];
+            }
+            
+            if (index == 1)
+            {
+                cout << "Province B" << ", Day " << j + 1 << " : ";
+                cin >> temperature[index][j];
+            }
+            
+            if (index == 2)
+            {
+                cout << "Province C" << ", Day " << j + 1 << " : ";
+                cin >> temperature[index][j];
+            }
+        }
+    }
+    
+    cout << '\n';
+    cout << '\n';
+    
+    for (index = 0; index < 3; index ++)
+    {
+        for (j = 0; j < 7; j ++)
+        {
+            if (index == 0)
+            {
+                cout << "Province A" << ", Day " << j + 1 << " = " << temperature[index][j] << '\n';
+            }
+            
+            if (index == 1)
+            {
+                cout << "Province B" << ", Day " << j + 1 << " = " << temperature[index][j] << '\n';
+            }
+            
+            if (index == 2)
+            {
+                cout << "Province C" << ", Day " << j + 1 << " = " << temperature[index][j] << '\n';
+            }
+        }
+    }
+    
+    return 0;
+}
