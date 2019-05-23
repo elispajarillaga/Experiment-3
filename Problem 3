@@ -1,0 +1,41 @@
+// Problem 3
+#include<iostream>
+
+using namespace std;
+
+int main()
+{
+    int ans = 0, b, c, d;
+    char arr[ans];
+ 
+    cout << "Enter the number of your characters: ";
+    cin >> ans;
+    cout << "Enter the characters to be reversed: ";
+  
+    for (b = 0; b < ans; b ++)
+    {
+        cin >> arr[b];
+    }
+    
+    c = b - 1;
+    b = 0;
+    
+    while (b < c)
+    {
+        d = arr[b];
+        arr[b] = arr[c];
+        arr[c] = d;
+        b ++;
+        c --;
+    }
+    
+    cout << '\n';
+    cout << '\n';
+    
+    for (b = 0; b < ans; b ++)
+    {
+        cout << arr[b] << ", ";
+    }
+    
+    return 0;
+}
